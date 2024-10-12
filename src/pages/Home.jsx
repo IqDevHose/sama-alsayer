@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white font-tajawal" >
+    <div className="font-tajawal" >
       {/* Main Section */}
       <section className="container mx-auto py-20">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center p-8">
             <img
-              src="/undraw_profile_re_4a55.svg"
+              src="/assets/43.png"
               alt="Minimalist room design"
               className="w-full max-w-md h-auto object-contain transition-transform duration-300 hover:scale-105"
             />
@@ -157,7 +157,7 @@ const Home = () => {
       <section
         className="relative bg-cover bg-center h-80 flex items-center"
         style={{
-          backgroundImage: "url('/assets/IMG-20240929-WA0069.jpg')",
+          backgroundImage: "url('/assets/40.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
