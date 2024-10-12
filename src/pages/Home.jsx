@@ -8,10 +8,10 @@ const Home = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
   const staticImages = [
-    "/assets/IMG-20240929-WA0064.jpg",
-    "/assets/IMG-20240929-WA0070.jpg",
-    "/assets/IMG-20240929-WA0054.jpg",
-    "/assets/IMG-20240929-WA0062.jpg"
+    "/assets/30.jpg",
+    "/assets/16.jpg",
+    "/assets/18.jpg",
+    "/assets/33.jpg"
   ];
 
   const openModal = (image) => {

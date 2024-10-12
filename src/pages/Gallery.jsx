@@ -3,14 +3,14 @@ import { Card } from "@material-tailwind/react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Gallery = () => {
-  const startImageNumber = 34; // Starting image number
-  const endImageNumber = 71; // Ending image number
+  const startImageNumber = 1; // Starting image number
+  const endImageNumber = 42; // Ending image number
   const galleryImages = [];
 
   // Generate paths for images from 34 to 98
   for (let i = startImageNumber; i <= endImageNumber; i++) {
-    const imageNumber = i.toString().padStart(4, "0"); // Pads with leading zeros (e.g., 0034)
-    galleryImages.push(`/assets/IMG-20240929-WA${imageNumber}.jpg`);
+    const imageNumber = i.toString().padStart(); // Pads with leading zeros (e.g., 0034)
+    galleryImages.push(`/assets/${imageNumber}.jpg`);
   }
 
   // State for modal
