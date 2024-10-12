@@ -15,10 +15,10 @@ const Footer = () => {
               />
           <div>
             <h3 className="text-xl font-bold text-white mr-2">
-              شركة طريق بيروت للتجارة - محدودة المسؤولية
+              شركة سما الساير
             </h3>
             <p className="text-sm text-gray-400 mr-2">
-              &copy; كل الحقوق محفوظة لشركة طريق بيروت للتجارة 2024.
+              &copy; كل الحقوق محفوظة لشركة سما الساير 2024.
             </p>
           </div>
         </div>
