@@ -33,7 +33,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 mb-10 md:mb-0 px-4">
             <div className="max-w-lg">
               <div className="h-1 w-10 bg-black mb-4"></div>
-              <h1 className="font-bold text-4xl mb-6">
+              <h1 className="font-bold text-4xl md:text-5xl mb-6">
                 شركة سما الساير
               </h1>
               <p
