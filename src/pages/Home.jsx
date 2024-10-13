@@ -10,7 +10,7 @@ const Home = () => {
   const staticImages = [
     "/assets/30.jpg",
     "/assets/16.jpg",
-    "/assets/18.jpg",
+    "/assets/52.jpg",
     "/assets/33.jpg"
   ];
 
@@ -33,14 +33,13 @@ const Home = () => {
           <div className="w-full md:w-1/2 mb-10 md:mb-0 px-4">
             <div className="max-w-lg">
               <div className="h-1 w-10 bg-black mb-4"></div>
-              <h1 className="font-bold text-4xl md:text-5xl mb-6">
+              <h1 className="font-bold text-4xl mb-6">
                 شركة سما الساير
               </h1>
               <p
                 className="text-lg text-gray-700 mb-6"
               >
                 شركة تقوم بأعمال تجهيز وتنفيذ وتصميم المشاريع ذات الطابع الفني والهندسي في مجال محطات توليد الطاقة الكهربائية وكذلك مشاريع النفط والغاز وكذلك تصميم وتجهيز محطات تصفية المياه ومعالجة المياه الصناعية
-
               </p>
               <Link to={"/about"}>
                 <Button
