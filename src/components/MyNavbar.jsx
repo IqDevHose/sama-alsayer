@@ -46,8 +46,8 @@ export function MyNavbar() {
             <Link to="/" className="flex-shrink-0">
               <img
                 src="/logo.png"
-                alt="beirut Logo"
-                className="w-64 object-cover"
+                alt="sama Logo"
+                className="w-36 object-cover"
               />
             </Link>
           </div>

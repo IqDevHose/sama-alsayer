@@ -11,7 +11,7 @@ const Home = () => {
     "/assets/30.jpg",
     "/assets/16.jpg",
     "/assets/52.jpg",
-    "/assets/33.jpg"
+    "/assets/33.jpg",
   ];
 
   const openModal = (image) => {
@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="font-tajawal" >
+    <div className="font-tajawal">
       {/* Main Section */}
       <section className="container mx-auto py-20">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -33,13 +33,12 @@ const Home = () => {
           <div className="w-full md:w-1/2 mb-10 md:mb-0 px-4">
             <div className="max-w-lg">
               <div className="h-1 w-10 bg-black mb-4"></div>
-              <h1 className="font-bold text-4xl mb-6">
-                شركة سما الساير
-              </h1>
-              <p
-                className="text-lg text-gray-700 mb-6"
-              >
-                شركة تقوم بأعمال تجهيز وتنفيذ وتصميم المشاريع ذات الطابع الفني والهندسي في مجال محطات توليد الطاقة الكهربائية وكذلك مشاريع النفط والغاز وكذلك تصميم وتجهيز محطات تصفية المياه ومعالجة المياه الصناعية
+              <h1 className="font-bold text-4xl mb-6">شركة سما الساير</h1>
+              <p className="text-lg text-gray-700 mb-6">
+                شركة تقوم بأعمال تجهيز وتنفيذ وتصميم المشاريع ذات الطابع الفني
+                والهندسي في مجال محطات توليد الطاقة الكهربائية وكذلك مشاريع
+                النفط والغاز وكذلك تصميم وتجهيز محطات تصفية المياه ومعالجة
+                المياه الصناعية
               </p>
               <Link to={"/about"}>
                 <Button
@@ -54,11 +53,11 @@ const Home = () => {
 
           {/* Right side: Image section */}
           <div className="w-full md:w-1/2 flex justify-center px-4">
-            <Card className="w-full max-w-lg overflow-hidden rounded-[30px]">
+            <Card className="max-w-lg overflow-hidden rounded-[30px]">
               <img
-                src="/logo.png"
+                src="/pic.webp"
                 alt="Fashion Model"
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                className="w-96 object-cover transition-transform duration-300 hover:scale-105"
               />
             </Card>
           </div>
@@ -71,16 +70,20 @@ const Home = () => {
           <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
             <h2 className="text-4xl font-bold mb-6">من نحن</h2>
             <p className="text-gray-700 mb-8">
-            نحن شركة متخصصة في تنفيذ المشاريع الهندسية بمجالات الطاقة، النفط، والغاز، وتصميم محطات معالجة المياه. تأسست عام 1994 وتطورت لتصبح شركة رائدة في مجال المقاولات والطاقة. نسعى لتقديم حلول مستدامة بجودة عالية وفقًا للمعايير العالمية لتطوير البنية التحتية.            </p>
+              نحن شركة متخصصة في تنفيذ المشاريع الهندسية بمجالات الطاقة، النفط،
+              والغاز، وتصميم محطات معالجة المياه. تأسست عام 1994 وتطورت لتصبح
+              شركة رائدة في مجال المقاولات والطاقة. نسعى لتقديم حلول مستدامة
+              بجودة عالية وفقًا للمعايير العالمية لتطوير البنية التحتية.
+            </p>
             {/* <Button className="bg-lime-300 text-gray-800 rounded-full w-40 py-3 hover:bg-lime-400 transition-colors">
               Shop now
             </Button> */}
           </div>
-          <div className="w-full md:w-1/2 flex justify-center items-center p-8">
+          <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
-              src="/assets/43.png"
+              src="/pic2.webp"
               alt="Minimalist room design"
-              className="w-full max-w-md h-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="rounded-3xl px-2 w-96 max-w-md h-auto object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
@@ -161,20 +164,12 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-center w-full">
-          <h1
-            className="text-3xl font-bold text-white mb-4"
-          >
-            تواصل معنا
-          </h1>
-          <p
-            className="text-lg text-gray-300 mb-8"
-          >
+          <h1 className="text-3xl font-bold text-white mb-4">تواصل معنا</h1>
+          <p className="text-lg text-gray-300 mb-8">
             لا تتردد في إرسال رسالة لنا
           </p>
-          <a href="mailto:nfoddddd@beirut.iq">
-            <button
-              className="bg-white rounded-full hover:bg-gray-300 px-6 py-1 text-gray-800 font-semibold text-lg"
-            >
+          <a href="mailto:info@sama-alsayer.iq">
+            <button className="bg-white rounded-full hover:bg-gray-300 px-6 py-1 text-gray-800 font-semibold text-lg">
               ابدأ
             </button>
           </a>
