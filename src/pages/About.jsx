@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Mini Image */}
@@ -12,18 +15,18 @@ const About = () => {
             className="w-64 h-48 object-cover rounded-full mb-6"
           /> */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-            من نحن
+          {t("aboutUs.title")}
           </h1>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-center md:text-right">
-          شركة تقوم بأعمال تجهيز وتنفيذ وتصميم المشاريع ذات الطابع الفني والهندسي في مجال محطات توليد الطاقة الكهربائية وكذلك مشاريع النفط والغاز وكذلك تصميم وتجهيز محطات تصفية المياه ومعالجة المياه الصناعية
+          {t("aboutUs.content")}
         </p>
       </section>
 
       {/* History Section */}
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          تاريخ العلامة التجارية
+        {t("aboutUs.history")}
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-center md:text-right">
           "تأسست الشركة في بداية التسعينات في عام 1994 باسم مكتب الساير للخدمات الهندسية للقيام بأعمال تجهيز وتأهيل منظومات الطاقة الكهربائية. في عام 1999 تم توسيع أعمال المكتب للقيام بأعمال المقاولات بالإضافة إلى تجهيز وتنفيذ وتصميم. في عام 2009 تم تكييف الوضع القانوني للمكتب ليصبح شركة الساير للخدمات الهندسية. في عام 2014 تم تغيير اسم الشركة ليضاف نشاط المقاولات ليصبح اسم الشركة شركة الساير للتجارة العامة والمقاولات والخدمات الهندسية. وتعتبر الشركة من الشركات المهمة في مجال شركات قطاع الطاقة (النفط والكهرباء)."
@@ -32,8 +35,8 @@ const About = () => {
 
       {/* History Section */}
       <section className="container mx-auto px-6 py-12">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          أهم المشاريع التي قامت بها الشركة
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6  text-center">
+        {t("aboutUs.ourServices")}
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-center">
 
@@ -60,10 +63,11 @@ const About = () => {
       {/* Promise Section */}
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          هدفنا
+        {t("aboutUs.ourGoals")}
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-center md:text-right">
-          نسعى لتقديم حلول متكاملة ومستدامة في مجالات الطاقة والمياه من خلال تنفيذ مشاريع هندسية عالية الجودة. نهدف إلى تحقيق رضا العملاء بتقديم أفضل الخدمات الهندسية، والالتزام بالمعايير العالمية في كل مراحل التصميم، التجهيز، التنفيذ والصيانة، مما يساهم في تطوير البنية التحتية وزيادة الإنتاجية في مختلف القطاعات.        </p>
+        {t("aboutUs.Goals")}
+        </p>
       </section>
     </div>
   );

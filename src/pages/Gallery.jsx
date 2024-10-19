@@ -1,8 +1,11 @@
+/* eslint-disable react/display-name */
 import React, { useState } from "react";
 import { Card } from "@material-tailwind/react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   const startImageNumber = 1; // Starting image number
   const endImageNumber = 56; // Ending image number
   const galleryImages = [];
@@ -51,7 +54,9 @@ const Gallery = () => {
 
   return (
     <div className="container mx-auto py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">المنتجات</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">
+      {t("homePage.OurGallery")}
+      </h2>
 
       {/* Responsive Grid for Gallery */}
       <ResponsiveMasonry

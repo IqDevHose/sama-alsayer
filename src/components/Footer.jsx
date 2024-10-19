@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gray-900 text-gray-300 py-8">
       <div className="container flex flex-col md:flex-row justify-between items-start mx-4 space-y-6 md:space-y-0 px-6">
@@ -15,10 +17,10 @@ const Footer = () => {
               /> */}
           <div className="flex flex-col items-start mt-0 md:mt-2">
             <h3 className="text-xl font-bold text-white">
-              شركة سما الساير
+            {t("footer.companyName")}
             </h3>
             <p className="text-sm text-gray-400">
-              &copy; كل الحقوق محفوظة لشركة سما الساير 2024.
+            {t("footer.rights")}
             </p>
           </div>
         </div>

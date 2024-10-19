@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { Button, Typography, Card } from "@material-tailwind/react";
+import  { useState } from "react";
+import { Button, Card } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { Eye } from "lucide-react";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { useTranslation } from "react-i18next";
+// import { Eye } from "lucide-react";
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 const Home = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -33,19 +35,19 @@ const Home = () => {
           <div className="w-full md:w-1/2 mb-10 md:mb-0 px-4">
             <div className="max-w-lg">
               <div className="h-1 w-10 bg-black mb-4"></div>
-              <h1 className="font-bold text-4xl mb-6">شركة سما الساير</h1>
+              <h1 className="font-bold text-4xl mb-6">
+              {t("homePage.companyName")} {/* Translate company name */}
+                
+              </h1>
               <p className="text-lg text-gray-700 mb-6">
-                شركة تقوم بأعمال تجهيز وتنفيذ وتصميم المشاريع ذات الطابع الفني
-                والهندسي في مجال محطات توليد الطاقة الكهربائية وكذلك مشاريع
-                النفط والغاز وكذلك تصميم وتجهيز محطات تصفية المياه ومعالجة
-                المياه الصناعية
+              {t("homePage.companyDescription")} {/* Translate company description */}
               </p>
               <Link to={"/about"}>
                 <Button
                   color="black"
                   className="rounded-full hover:bg-gray-800 px-6 py-2 text-xl"
                 >
-                  من نحن
+                 {t("homePage.companyDescriptionButton")} {/* Translate button text */}
                 </Button>
               </Link>
             </div>
@@ -68,12 +70,9 @@ const Home = () => {
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-            <h2 className="text-4xl font-bold mb-6">من نحن</h2>
+          <h2 className="text-4xl font-bold mb-6">{t("homePage.aboutUs")}</h2> {/* Translate About Us section title */}
             <p className="text-gray-700 mb-8">
-              نحن شركة متخصصة في تنفيذ المشاريع الهندسية بمجالات الطاقة، النفط،
-              والغاز، وتصميم محطات معالجة المياه. تأسست عام 1994 وتطورت لتصبح
-              شركة رائدة في مجال المقاولات والطاقة. نسعى لتقديم حلول مستدامة
-              بجودة عالية وفقًا للمعايير العالمية لتطوير البنية التحتية.
+            {t("homePage.aboutUsContent")} {/* Translate About Us content */}
             </p>
             {/* <Button className="bg-lime-300 text-gray-800 rounded-full w-40 py-3 hover:bg-lime-400 transition-colors">
               Shop now
@@ -95,7 +94,7 @@ const Home = () => {
           <h1
             className="text-3xl font-bold text-center mb-8" // Reduced heading size and margin
           >
-            منتجاتنا
+         {t("homePage.OurGallery")}
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Left Column: Two stacked images */}
@@ -148,7 +147,7 @@ const Home = () => {
               <button
                 className="bg-black text-white rounded-full hover:bg-gray-800 px-6 py-2 text-lg font-semibold" // Reduced padding
               >
-                شاهد المزيد
+                     {t("homePage.OurGalleryButton")} {/* Translate See More button */}
               </button>
             </Link>
           </div>
@@ -164,13 +163,13 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-center w-full">
-          <h1 className="text-3xl font-bold text-white mb-4">تواصل معنا</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">   {t("homePage.contactUs")}</h1>
           <p className="text-lg text-gray-300 mb-8">
-            لا تتردد في إرسال رسالة لنا
+          {t("homePage.contactUsContent")}
           </p>
           <a href="mailto:info@sama-alsayer.iq">
             <button className="bg-white rounded-full hover:bg-gray-300 px-6 py-1 text-gray-800 font-semibold text-lg">
-              ابدأ
+            {t("homePage.contactUsButton")}
             </button>
           </a>
         </div>

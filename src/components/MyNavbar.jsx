@@ -1,7 +1,8 @@
 
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
+import i18n from "../lib/i18next";
 const NavLink = ({ to, children }) => (
   <Link
     to={to}
@@ -17,8 +18,10 @@ const NavLink = ({ to, children }) => (
 
 export function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState("en");
 
-  useEffect(() => {
+ useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsOpen(false);
@@ -28,13 +31,30 @@ export function MyNavbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+
+  useEffect(() => {
+    // Update document direction on language change
+    document.documentElement.setAttribute(
+      "dir",
+      currentLanguage === "ar" ? "rtl" : "ltr"
+    );
+  }, [currentLanguage]);
+
+
   const navItems = [
-    { name: "الرئيسية ", path: "/" },
-    { name: "المنتجات", path: "/gallery" },
-    { name: "حول", path: "/about" },
+    { name: t("home"), path: "/" },
+    { name: t("gallery"), path: "/gallery" },
+    { name: t("about"), path: "/about" },
+  ]
 
-  ];
+  const toggleLanguage = () => {
+    const newLanguage = currentLanguage === "en" ? "ar" : "en";
+    setCurrentLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  };
 
+  
   return (
     <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur-md shadow-sm">
       {/* Adjusted padding */}
@@ -54,14 +74,19 @@ export function MyNavbar() {
 
 
           <div className="hidden md:block">
-            {/* Increased space between items */}
-            <div className="ml-10 flex items-baseline gap-6">
-
+            <div className="ml-10 flex items-baseline gap-6 text-xl">
               {navItems.map((item) => (
-                <NavLink key={item.name} to={item.path}>
+                <NavLink key={item.name} to={item.path} className={({ isActive }) => isActive ? "text-white" : "text-[#C4AC6D]"}>
                   {item.name}
                 </NavLink>
               ))}
+              {/* Single Language Toggle Button */}
+              <button
+                onClick={toggleLanguage}
+                className="py-1 px-3 bg-gray-200 rounded hover:bg-gray-300"
+              >
+                {currentLanguage === "en" ? "AR" : "EN"}
+              </button>
             </div>
           </div>
 
@@ -108,12 +133,16 @@ export function MyNavbar() {
               )}
             </button>
           </div>
+
+
+
+
         </div>
       </div>
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6"> {/* Adjusted padding and spacing */}
+          <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -124,9 +153,19 @@ export function MyNavbar() {
                 {item.name}
               </Link>
             ))}
+            {/* Language Toggle Button in Mobile Menu */}
+            <div className="pt-4">
+              <button
+                onClick={toggleLanguage}
+                className="py-2 px-4 w-full bg-gray-200 rounded hover:bg-gray-300"
+              >
+                {currentLanguage === "en" ? "AR" : "EN"}
+              </button>
+            </div>
           </div>
         </div>
       )}
+      
     </nav>
   );
 }
