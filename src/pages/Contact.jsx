@@ -47,11 +47,11 @@ const Contact = () => {
                         <h2 className="text-3xl font-bold mb-6">تواصل معنا</h2>
                         <div className="mb-6 p-6 bg-gray-100 rounded-lg">
                             <h3 className="text-xl font-semibold">📞 رقم الهاتف</h3>
-                            <p className="text-gray-600">+964 000 0000 0000</p>
+                            <p className="text-gray-600">+964 7710314292</p>
                         </div>
                         <div className="p-6 bg-gray-100 rounded-lg">
                             <h3 className="text-xl font-semibold">✉️ البريد الاكتروني</h3>
-                            <p className="text-gray-600">info@nsr.iq</p>
+                            <p className="text-gray-600">info@sama-alsyer.iq</p>
                         </div>
                     </div>
 

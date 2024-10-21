@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="flex  flex-col">
           <div className="flex items-center gap-3 mt-3 ">
             <FaPhone />
-            <a href="tel:123456789 964+">77000000000 964+ </a>
+            <a href="tel:07710314292 964+">7710314292 964+ </a>
           </div>
 
           <div className="flex items-center gap-3 mt-3">
